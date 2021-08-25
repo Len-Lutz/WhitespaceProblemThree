@@ -1,5 +1,5 @@
 glob is I
-prok is V
+pRok is V
 pish is X
 tegj is L
 frak is C
