@@ -69,11 +69,11 @@ public class WhitespaceProblemThree {
      * method: getNotes -  reads in each note from file
      * 
      * @param filePath - fully qualified filename
-     * @param notes - ArrayList to store notes in
      * 
      * @return if file was successfully read, return true
      *         if not, return false
      */
+    @SuppressWarnings("ConvertToTryWithResources")
     private static boolean getNotes(Path filePath) {
         try {
             // open file, read all lines, create and return list
