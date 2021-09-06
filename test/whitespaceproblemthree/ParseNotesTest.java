@@ -18,6 +18,8 @@ public class ParseNotesTest {
 
     @Before
     public void setupEach() {
+        // clear the maps and refill with required information
+        //  automatically runs before each test
         notes.clear();
         notes.add("glob is I");
         notes.add("prok is V");
@@ -37,13 +39,19 @@ public class ParseNotesTest {
     public void testFillMaps() {
         ParseNotes pn = new ParseNotes(notes);
 
+        // test that wordNumMap has been created
         assertFalse(wordNumMap.isEmpty());
+        // test that seven items have been added to the wordNumMap
         assertEquals(7, wordNumMap.size());
+        // test that searching wordNumMap for "glob" returns Roman Numeral "I"
         assertEquals(0, wordNumMap.get("glob").indexOf('I'));
 
         assertFalse(productValueMap.isEmpty());
+        // test that productValueMap has been created
         assertEquals(4, productValueMap.size());
+        //  retrieve a value from productValueMap
         Double result = productValueMap.get("iron");
+        //  test that correct value wsa returned
         assertTrue(result == 195.5);
     }
 
