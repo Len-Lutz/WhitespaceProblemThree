@@ -46,12 +46,12 @@ public class ParseNotesTest {
         // test that searching wordNumMap for "glob" returns Roman Numeral "I"
         assertEquals(0, wordNumMap.get("glob").indexOf('I'));
 
-        assertFalse(productValueMap.isEmpty());
         // test that productValueMap has been created
+        assertFalse(productValueMap.isEmpty());
+        // Verify four items have been added to productValueMap
         assertEquals(4, productValueMap.size());
-        //  retrieve a value from productValueMap
+        //  test that correct value was returned
         Double result = productValueMap.get("iron");
-        //  test that correct value wsa returned
         assertTrue(result == 195.5);
     }
 
